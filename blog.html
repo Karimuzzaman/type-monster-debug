@@ -218,11 +218,101 @@
                     </h2>
                     <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
                         data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
-                            body. Nothing more exciting happening here in terms of content, but just filling up the
-                            space to make it look, at least at first glance, a bit more representative of how this would
-                            look in a real-world application.</div>
+                        <div class="accordion-body">
+                            <p>Undefined value primitive value is used when a variable has not been assigned a value.
+                                undefined existence is a consequence of JavaScript's permissive nature that allows the
+                                usage of: <br>
+
+                                1. uninitialized variables <br>
+                                2. non-existing object properties or methods <br>
+                                3. out of bounds indexes to access array elements <br>
+                                4. the invocation result of a function that returns nothing <br>
+
+                                <b>Uninitialized variable: </b>
+                                A declared variable but not yet assigned with a value (uninitialized) is by default
+                                undefined.
+
+                                Example: <br>
+
+                                let myVariable; <br>
+                                myVariable; // => undefined
+                                <br>
+
+                                myVariable is declared and not yet assigned with a value. Accessing the variable
+                                evaluates to undefined. <br>
+
+                                <b>Accessing a non-existing property: </b>
+                                When accessing a non-existing object property, JavaScript returns undefined.
+
+                                Let's demonstrate that in an example: <br>
+
+                                let favoriteMovie = {
+                                title: 'Blade Runner'
+                                }; <br>
+                                favoriteMovie.actors; // => undefined
+                                <br>
+                                favoriteMovie is an object with a single property title. Accessing a non-existing
+                                property actors using a property accessor favoriteMovie.actors evaluates to undefined.
+                                <br>
+
+                                <b>Function parameters: </b>
+                                The function parameters implicitly default to undefined.
+
+                                Usually a function defined with a specific number of parameters should be invoked with
+                                the same number of arguments. <br> <br>
+                                function multiply(a, b) { <br>
+                                a; // => 5 <br>
+                                b; // => undefined <br>
+                                return a * b; <br>
+                                } <br>
+                                multiply(5); // => NaN <br>
+                                The invocation multiply(5) is performed with a single argument: as result a parameter is
+                                5, but the b parameter is undefined.
+                                <br>
+                                <b>Function return value</b>
+                                Implicitly, without return statement, a JavaScript function returns undefined.
+
+                                A function that doesn't have return statement implicitly returns undefined: <br>
+
+                                function square(x) { <br>
+                                const res = x * x; <br>
+                                } <br>
+                                square(2); // => undefined <br>
+                                square() function does not return any computation results. The function invocation
+                                result is undefined. <br>
+                                The same situation happens when return statement is present, but without an expression
+                                nearby: <br>
+
+                                function square(x) { <br>
+                                const res = x * x; <br>
+                                return; <br>
+                                } <br>
+                                square(2); // => undefined <br>
+                                return statement is executed, but it doesn't return any expression. The invocation
+                                result is also undefined. <br>
+                                <b>void operator: </b>
+                                void <expression> evaluates the expression and returns undefined no matter the result of
+                                    the evaluation. <br>
+
+                                    void 1; // => undefined <br>
+                                    void (false); // => undefined <br>
+                                    void {name: 'John Smith'}; // => undefined <br>
+                                    void Math.min(1, 3); // => undefined <br>
+                                    One use case of void operator is to suppress expression evaluation to undefined,
+                                    relying on some side-effect of the evaluation. <br>
+                                    <b>undefined in arrays: </b>
+                                    You get undefined when accessing an array element with an out of bounds index. <br>
+
+                                    const colors = ['blue', 'white', 'red']; <br>
+                                    colors[5]; // => undefined <br>
+                                    colors[-1]; // => undefined <br>
+                                    colors array has 3 elements, thus valid indexes are 0, 1, and 2.
+
+                                    Because there are no array elements at indexes 5 and -1, the accessors colors[5] and
+                                    colors[-1] are undefined. <br> <br>
+
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
