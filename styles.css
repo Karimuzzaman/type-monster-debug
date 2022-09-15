@@ -206,7 +206,7 @@ button {
   }
 
   #histories {
-    display: grid;
+    /* display: grid; */
     grid-template-columns: repeat(1, 1fr);
 
   }
@@ -221,9 +221,5 @@ button {
     gap: 15px;
     grid-row-gap: 30px;
     margin-bottom: 20px;
-
-
   }
-
-
 }
